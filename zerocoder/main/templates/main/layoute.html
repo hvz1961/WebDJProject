@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    {% block title %}
+    {% endblock %}
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-md-3 col-lg-2 d-flex flex-column align-items-center">
+                <img src="{% static 'main/img/LogoCL.png' %}" alt="Логотип компании КофеЛавка" width="120px">
+                <span>КофеЛавка</span>
+                <ul class="nav flex-column w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'page2' %}">Второстепенная</a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

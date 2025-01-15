@@ -1,0 +1,33 @@
+{% load static %}
+<aside class="sidebar bg-light p-4 border-end vh-100 position-fixed">
+    <!-- Ссылки на популярные статьи -->
+    <div class="mb-4">
+        <h5 class="text-primary">Популярные статьи</h5>
+        <ul class="list-unstyled">
+            <li><a href="{% url 'page5' %}" class="text-decoration-none">Как выбрать идеальный кофе?</a></li>
+        </ul>
+    </div>
+
+    <!-- Виджет для подписки на рассылку -->
+    <div class="mb-4">
+        <h5 class="text-primary">Подпишитесь на рассылку</h5>
+        <form method="post" action="{% url 'page6' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Ваш email" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Подписаться</button>
+        </form>
+    </div>
+
+    <!-- Реклама или партнерские ссылки -->
+    <div class="mb-4">
+        <h5 class="text-primary">Реклама</h5>
+        <div class="p-3 bg-white border rounded">
+            <a href="https://example.com" target="_blank">
+                <img src="{% static 'main/img/ad-banner.jpg' %}" alt="Реклама" class="img-fluid">
+            </a>
+            <p class="mt-2 small">Партнёрская ссылка: <a href="https://example.com" target="_blank">example.com</a></p>
+        </div>
+    </div>
+</aside>

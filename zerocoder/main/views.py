@@ -7,6 +7,13 @@ def index(request):
         'caption':'КофеЛавка'
     }
     return render(request, 'main/index.html', data)
-
 def new(request):
     return render(request, 'main/new.html')
+def services(request):
+    return render(request, 'main/services.html')
+def contact(request):
+    return render(request, 'main/contact.html')
+def article_detail(request):
+    return render(request, 'main/article_detail.html')
+def subscribe(request):
+    return render(request, 'main/subscribe.html')

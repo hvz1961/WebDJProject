@@ -1,0 +1,16 @@
+/* Боковая панель */
+.sidebar {
+    width: 260px;
+    height: calc(100vh - 90px); /* Минус высота верхнего меню */
+    top: 90px; /* Смещение вниз под верхнее меню */
+    left: 0;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 1000;
+    background-color: #f8f9fa;
+}
+
+/* Основной контент */
+.content-container {
+    margin-top: 20px; /* Добавляем отступ под верхнее меню */
+}

@@ -1,0 +1,36 @@
+            <aside class="col-md-4">
+                {% include 'main/sidebar.html' %}
+            </aside>
+
+                        <li><a href="{% url 'page5' article_id=1 %}" class="text-decoration-none">Как выбрать идеальный кофе?</a></li>
+            <li><a href="{% url 'page5' article_id=2 %}" class="text-decoration-none">10 советов по уходу за кофемашиной</a></li>
+            <li><a href="{% url 'page5' article_id=3 %}" class="text-decoration-none">Лучшие рецепты кофейных напитков</a></li>
+
+
+
+            <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-md-3 col-lg-2 d-flex flex-column align-items-center">
+                <img src="{% static 'main/img/LogoCL.png' %}" alt="Логотип компании КофеЛавка" width="120px">
+                <br>
+                <span><h3>КофеЛавка</h3></span>
+                <br>
+                <ul class="nav flex-column w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'page2' %}">Второстепенная</a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+
+

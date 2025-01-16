@@ -17,3 +17,7 @@ def article_detail(request):
     return render(request, 'main/article_detail.html')
 def subscribe(request):
     return render(request, 'main/subscribe.html')
+def terms(request):
+    return render(request, 'main/terms.html')
+def privacy_policy(request):
+    return render(request, 'main/privacy_policy.html')

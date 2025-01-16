@@ -1,0 +1,65 @@
+{% load static %}
+<footer class="bg-dark text-light py-4" style="margin-left: 260px; width: calc(100% - 260px);">
+    <div class="container">
+        <div class="row">
+            <!-- Ссылки на необходимые документы -->
+            <div class="col-md-3 mb-3">
+                <h5>Документы</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'page7' %}" class="text-decoration-none text-light">Условия использования</a></li>
+                    <li><a href="{% url 'page8' %}" class="text-decoration-none text-light">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+
+            <!-- Контактная информация -->
+            <div class="col-md-3 mb-3">
+                <h5>Контакты</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-phone"></i> <a href="tel:+1234567890" class="text-decoration-none text-light">+1 (234) 567-890</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@coffeelavka.com" class="text-decoration-none text-light">info@coffeelavka.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Город, Улица, Дом</li>
+                </ul>
+            </div>
+
+            <!-- Карта сайта -->
+            <div class="col-md-3 mb-3">
+                <h5>Карта сайта</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'home' %}" class="text-decoration-none text-light">Главная</a></li>
+                    <li><a href="{% url 'page2' %}" class="text-decoration-none text-light">О нас</a></li>
+                    <li><a href="{% url 'page3' %}" class="text-decoration-none text-light">Услуги</a></li>
+                    <li><a href="{% url 'page4' %}" class="text-decoration-none text-light">Контакты</a></li>
+                </ul>
+            </div>
+
+            <!-- Социальные сети -->
+            <div class="col-md-3 mb-3">
+                <h5>Мы в соцсетях</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://facebook.com" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://instagram.com" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://linkedin.com" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-light">
+        <p class="text-center mb-0">© 2025 КофеЛавка. Все права защищены.</p>
+    </div>
+</footer>

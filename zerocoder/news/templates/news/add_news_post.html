@@ -1,0 +1,47 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Страница для добавления новостей</title>
+{% endblock %}
+
+{% block content %}
+<!--<style>h4, h2 {text-align: center}</style>-->
+<style>
+        h2 {text-align: center}
+        .form-label {
+            color: #007bff; /* Синий цвет */
+            font-weight: bold; /* Жирный шрифт */
+        }
+</style>
+<div>
+    <h2>Форма для добавления новостей</h2>
+    <br>
+<form method="post" class="p-4 border rounded shadow-sm bg-light">
+    {% csrf_token %}
+    <div class="mb-3">
+        {{ form.title }}
+    </div>
+    <div class="mb-3">
+        {{ form.short_description }}
+    </div>
+    <div class="mb-3">
+        {{ form.text }}
+    </div>
+    <div class="mb-3">
+        {{ form.author }}
+    </div>
+    <div class="row g-2">
+        <div class="col-md-6">
+        {{ form.pub_date }}
+        </div>
+        <div class="col-md-6">
+        {{ form.pub_time }}
+        </div>
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+    </div>
+</form>
+<p>{{error}}</p>
+</div>
+{% endblock %}

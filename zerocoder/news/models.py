@@ -6,8 +6,8 @@ class News_post(models.Model):
 	short_description = models.CharField('Краткое описание новости', max_length=200)
 	text = models.TextField('Новость')
 	author = models.CharField('Автор', max_length=50)
-	pub_date = models.DateTimeField('Дата публикации')
-	pub_time = models.DateTimeField('Время публикации')
+	pub_date = models.DateField('Дата публикации')
+	pub_time = models.TimeField('Время публикации')
 	def __str__(self):
 		return self.title
 

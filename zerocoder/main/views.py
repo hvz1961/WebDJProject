@@ -6,7 +6,7 @@ def index(request):
     }
     return render(request, 'main/index.html', data)
 def new(request):
-    return render(request, 'main/news.html')
+    return render(request, 'main/new.html')
 def services(request):
     return render(request, 'main/services.html')
 def contact(request):

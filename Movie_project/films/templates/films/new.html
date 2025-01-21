@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Вторая страница</title>
-</head>
-<body>
-<h1>Страница для добавления отзыва о фильме</h1>
-</body>
-</html>
+{% extends 'films/layoute.html' %}
+
+{% block title %}
+    <title>Первая страница</title>
+{% endblock %}
+
+{% block content %}
+<style>h4 {text-align: center}</style>
+    <h4>Отзывы о фильмах</h4>
+<br>
+	{% if reviews %}
+		{% for review in reviews %}
+			<div class="card">
+				<div class="card" style="width: 30rem;">
+					<div class="card-body">
+							<h4> {{ review.title }} </h4>
+							<br>
+							<h5><p> {{ review.short_description }} </p></h5>
+							<p> {{ review.review }} </p>
+							<p> {{ review.author }} </p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h4>Отзывов ещё нет</h4>
+	{% endif %}
+
+{% endblock %}

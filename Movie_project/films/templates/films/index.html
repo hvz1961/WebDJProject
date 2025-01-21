@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Рейтинг фильмов</title>
-</head>
-<body>
-<h1>Страница для записи отзыва о фильме</h1>
-</body>
-</html>
+{% extends 'films/layoute.html' %}
+
+{% block title %}
+    <title>Форма для добавления отзыва</title>
+{% endblock %}
+
+{% block content %}
+<!--<style>h4, h2 {text-align: center}</style>-->
+<style>
+        h2 {text-align: center}
+        .form-label {
+            color: #007bff; /* Синий цвет */
+            font-weight: bold; /* Жирный шрифт */
+        }
+</style>
+<div>
+    <h2>Форма для добавления отзыва</h2>
+    <br>
+<form method="post" class="p-4 border rounded shadow-sm bg-light">
+    {% csrf_token %}
+    <div class="mb-3">
+        {{ form.title }}
+    </div>
+    <div class="mb-3">
+        {{ form.short_description }}
+    </div>
+    <div class="mb-3">
+        {{ form.review }}
+    </div>
+    <div class="mb-3">
+        {{ form.author }}
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary w-100">Добавить отзыв</button>
+    </div>
+</form>
+<p>{{error}}</p>
+</div>
+{% endblock %}
